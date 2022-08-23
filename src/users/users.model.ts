@@ -12,7 +12,7 @@ import { Role } from '../roles/roles.model';
 interface UserCreationAttrs {
   email: string;
   password: string;
-  nickname: string;
+  login: string;
 }
 
 @Table({ tableName: 'users' })
@@ -60,7 +60,7 @@ export class User extends Model<User, UserCreationAttrs> {
     unique: true,
     allowNull: false,
   })
-  nickname: string;
+  login: string;
 
   @ApiProperty({
     example: false,
